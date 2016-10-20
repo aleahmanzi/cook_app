@@ -22,7 +22,7 @@
 
 	  <div class="ingredient_list">
 	   <p class="ingredient_title">Ingredients</p>
-	   <p ng-repeat="ingredient in data.ingredientLines">{{ ingredient }}</p><br/>
+	   <p ng-repeat="ingredient in data.ingredientLines track by $index">{{ ingredient }}</p><br/>
 	  </div><!-- . ingredient_list - -->
 
   </div><!-- . recipe_data - -->
