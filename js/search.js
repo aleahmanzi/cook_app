@@ -22,15 +22,12 @@ angular.module('myApp').controller('searchctrl',
 /// - return matches for recipe search
 
   $scope.photoUrl = function(match){
-    var url = match.imageUrlsBySize[90]
-    return url
+    return match.imageUrlsBySize[90]
   }
 /// - format results in an image
 
 $scope.addIngredient = function(){
   $scope.term.push({});
-  $scope.hgt = { height: (25) + 'px' };
-
 }
 
 $scope.addBlock = function(){

@@ -1,32 +1,28 @@
-<div>
+<section class="search_wrap" ng-style="style">
+ <div class="outline">
+   <div class="food_wrap">
+    
+    <div class="yes_wrap">
+     <p class="title" ID="title1">Ingredients I'm hungry for:</p>
+     <input class="yes_food" type="text" ng-model="term[$index].name" ng-repeat="item in term"/>
+     <button ng-click="addIngredient()">+</button>
+    </div><!-- . yes_wrap - -->
 
-  <section class="search_wrap" ng-style="style">
-   <div class="outline">
-     <div class="food_wrap">
-      
-      <div class="yes_wrap">
-       <p class="title" ID="title1">Ingredients I'm hungry for:</p>
-       <input class="yes_food" type="text" ng-model="term[$index].name" ng-repeat="item in term"/>
-       <button ng-click="addIngredient()">+</button>
-      </div><!-- . yes_wrap - -->
+    <div class="no_wrap">
+     <p class="title" ID="title2">Keep these out:</p>
+     <input class="no_food" type="text" ng-model="block[$index].name" ng-repeat="item in block"/>
+     <button ng-click="addBlock()">+</button>
+    </div><!-- . no_wrap - -->
 
-      <div class="no_wrap">
-       <p class="title" ID="title2">Keep these out:</p>
-       <input class="no_food" type="text" ng-model="block[$index].name" ng-repeat="item in block"/>
-       <button ng-click="addBlock()">+</button>
-      </div><!-- . no_wrap - -->
+    <input class="submit" type="submit" ng-click="search()" value="Submit" />
+   
+   </div><!-- . food_wrap - -->
+ </div><!-- . outline - -->
+</section><!-- .search_wrap - -->
 
-      <input class="submit" type="submit" ng-click="search()" value="Submit" />
-     
-     </div><!-- . food_wrap - -->
-   </div><!-- . outline - -->
-  </section><!-- .search_wrap - -->
-
-  <section class="result_wrap">
-    <a ng-repeat="match in matches" href="#/search/{{ match.id }}" class="result_data">
-      <img class="food_img" ng-src="{{ photoUrl(match) }}"/>
-      <div class="recipe_name"><p class="name">{{ match.recipeName }}</p></div>
-    </a><!-- . result_data - -->
-  </section><!-- . result_wrap - -->
-
-</div><!-- . searchctrl - -->
+<section class="result_wrap">
+  <a ng-repeat="match in matches" href="#/search/{{ match.id }}" class="result_data">
+    <img class="food_img" ng-src="{{ photoUrl(match) }}"/>
+    <div class="recipe_name"><p class="name">{{ match.recipeName }}</p></div>
+  </a><!-- . result_data - -->
+</section><!-- . result_wrap - -->

@@ -6,7 +6,7 @@
 
   <div class="recipe_data">
 	  <div class="name_wrap">
-	   <p>{{ data.name }}</p><br/>
+	   <p ng-model="saved">{{ data.name }}</p><br/>
 	  </div><!-- . name_wrap - -->
 
 	  <div class="time_wrap">
@@ -29,8 +29,8 @@
 
   <div class="heart_wrap">
    <div class="heart_info">
-    <img class="heart openHeart-{{openHeart}}" ng-click="likeIt()"src="pics/heart.png"/>
-    <img class="heart fullHeart-{{fullHeart}}" ng-click="unlikeIt()" src="pics/full_heart.svg"/>
+    <img class="heart openHeart-{{openHeart}}" ng-click="likeIt(data)"src="pics/heart.png"/>
+    <img class="heart fullHeart-{{fullHeart}}" ng-click="unlikeIt(data)" src="pics/full_heart.svg"/>
     <img class="picture" ng-repeat="image in data.images" src="{{ image.hostedLargeUrl }}"/>
    </div>
   </div><!-- . heart_wrap - -->

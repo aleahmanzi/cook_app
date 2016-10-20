@@ -5,6 +5,7 @@ $scope.openHeart = 'yes';
 $scope.fullHeart = 'no';
 $scope.recipeId = $routeParams.recipeId
 $scope.ingredientLines = '';
+$scope.likes = [];
 
 detail($scope.recipeId).success(function(data){
   console.log(data);
@@ -12,22 +13,26 @@ detail($scope.recipeId).success(function(data){
 })
 
 $scope.recipeImg = function(data){
-	var url = data.images
-	return url
+	return data.images
 }
 /// - format results in an image
 
 $scope.openLink = function(data){
 	$scope.link= data.source.sourceRecipeUrl;
 	console.log($scope.link); 
-	$window.open($scope.link, '	Recpie Link', 'width=800,height=700'
+	$window.open($scope.link, 'Recpie Link', 'width=800,height=700'
 	);
 }
 /// - click recpie link to open source site
 
-$scope.likeIt = function(){
+$scope.likeIt = function(data){
 	$scope.openHeart = 'no';
 	$scope.fullHeart = 'yes';
+	$scope.likes.push({
+		title: data.name,
+		link: data.source.sourceRecipeUrl
+	});
+	console.log($scope.likes);		
 }
 /// - like recipe
 

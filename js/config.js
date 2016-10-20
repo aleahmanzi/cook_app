@@ -4,7 +4,6 @@ angular.module('myApp')
     $routeProvider
     .when('/', {
         templateUrl: './html/home.html',
-        controller: 'homectrl'
     })
     .when('/myrecipes', {
         templateUrl: './html/myrecipes.html',

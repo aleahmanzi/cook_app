@@ -1,4 +1,9 @@
-angular.module('myApp').controller('recipesctrl', function($scope){
+angular.module('myApp').controller('recipesctrl', 
+	function($scope, myrecipes){
+
+$scope.likes = [];
+
 });
 
 /// - recipesctrl
+

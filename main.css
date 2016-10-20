@@ -49,5 +49,9 @@ input { width: 300px; }
 .source_info { margin-top: 10px; padding-bottom: 25px; }
 .link:hover { cursor: pointer; }
 
+.my_recipes { outline: 0px solid red; width: 100%; padding-top: 100px; }
+.temp_wrap { outline: 0px solid black; margin: 0 auto; width: 400px; }
+.temp { font-family: Lobster; font-size: 25px; color: #D5D5D5; text-align: center; }
+
 
 
