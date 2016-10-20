@@ -7,17 +7,16 @@ angular.module('myApp').controller('searchctrl',
   $scope.term = [{}]
   $scope.block = [{}]
   $scope.recipeId = ""
-
-  /*$scope.meal =  - to be added, veggie, vegan etc...*/
-
+  $scope.error = 'no';
   /// - default values
   
  $scope.search = function(){
     console.log($scope.term, $scope.block);
      search($scope.term, $scope.block).success(function(result){
-      console.log(result);
-      $scope.matches = result.matches;
-     })
+      console.log(result.matches.length);
+          $scope.matches = result.matches;
+          $scope.error = 'yes';
+      })
   };
 /// - return matches for recipe search
 

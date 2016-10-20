@@ -22,6 +22,13 @@ input { width: 300px; }
 .food_img { height: 250px; width: 250px; border: 3px solid #eee; display: inline-block; margin: 10px; position: relative; left: 25px; border-radius: 50%; }
 .recipe_name { outline: 0px sold black; margin-left: 25px; width: 250px; text-align: center;  }
 .name { outline: 0px solid blue; font-family: Lobster; font-size: 20px; color: #F94D2F;}
+.error-yes { display: block; }
+.error-no { display: none; } 
+.error_msg { width: 100%; outline: 0px solid black; }
+.error_wrap { outline: 0px solid red; width: 500px; margin: 0 auto;  }
+.error_msg p { font-family: Lobster; font-size: 20px; text-align: center; }
+
+
 
 .recipe_wrap { outline: 0px solid black; }
 .recipe_list { outline: 1px solid #D5D5D5; width: 700px; margin: 0 auto; }

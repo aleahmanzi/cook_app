@@ -25,4 +25,10 @@
     <img class="food_img" ng-src="{{ photoUrl(match) }}"/>
     <div class="recipe_name"><p class="name">{{ match.recipeName }}</p></div>
   </a><!-- . result_data - -->
+
+  <div class="error_msg error-{{error}}" ng-show="!matches.length">
+    <div class="error_wrap">
+      <p>Sorry, the ingredients you entered returned no recipes.<br/>Try Again!</p>
+    </div><!-- . error_wrap - -->
+  </div><!-- . error_msg - -->
 </section><!-- . result_wrap - -->
