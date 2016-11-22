@@ -21,6 +21,7 @@ angular.module('myApp').controller('searchctrl',
 /// - return matches for recipe search
 
   $scope.photoUrl = function(match){
+    console.log(match);
     return match.imageUrlsBySize[90]
   }
 /// - format results in an image
