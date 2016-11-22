@@ -1,10 +1,12 @@
-.hello_wrap { outline: 0px solid red; margin-top: 150px; }
+
+.hello_wrap { outline: 0px solid red; margin-top: 75px; }
 .welcome_section { outline: 0px solid black; width: 400px; margin: 0 auto; text-align: center; }
 .welcome { font-family: Lobster; font-size: 50px; color: #F94D2F; }
 .message { font-family: Lobster; font-size: 25px;}
 .circle { outline: 0px solid black; margin: 0 auto; margin-top: 25px; background: #D5D5D5; width: 100px; height: 100px; border-radius: 50%; }
 .circle:hover { cursor: pointer; }
 .circle_text { outline: 0px solid red; padding-top: 32px; color: white; }
+.main_img { outline: 0px solid red; height: 180px; margin-top: 30px; }
 
 .search_wrap { outline: 0px solid blue; width: 100%; min-height: 250px; margin-right: 5px; margin-top: 50px; }
 .outline { outline: 3px solid #F8F8F8; width: 510px; height: 310px; margin: 0 auto; padding-top: 5px; }
@@ -60,5 +62,8 @@ input { width: 300px; }
 .temp_wrap { outline: 0px solid black; margin: 0 auto; width: 400px; }
 .temp { font-family: Lobster; font-size: 25px; color: #D5D5D5; text-align: center; }
 
-
+@media only screen and (min-width: 768px) { 
+.main_img { height: 300px; }
+.welcome_section { width: 800px; }
+}
 
